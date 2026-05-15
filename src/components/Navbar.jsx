@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { MdDarkMode, MdLightMode, MdLanguage } from 'react-icons/md';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ theme, toggleTheme }) => {
   const { t, i18n } = useTranslation();
@@ -38,8 +39,9 @@ const Navbar = ({ theme, toggleTheme }) => {
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h1 style={{ fontSize: '1.4rem', fontWeight: '800', letterSpacing: '3px' }}>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <img src={logo} alt="Riyan Exim Logo" style={{ height: '45px', width: 'auto' }} />
+          <h1 style={{ fontSize: '1.4rem', fontWeight: '800', letterSpacing: '3px', margin: 0 }}>
             RIYAN <span className="gradient-text">EXIM</span>
           </h1>
         </Link>

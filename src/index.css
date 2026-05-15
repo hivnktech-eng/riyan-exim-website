@@ -1,30 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
 
 :root {
-  --primary: #0f172a;
-  --secondary: #3b82f6;
-  --accent: #60a5fa;
-  --bg-main: #f8fafc;
-  --text-main: #1e293b;
-  --glass-bg: rgba(255, 255, 255, 0.45);
+  --primary: #2d1b5d;
+  --secondary: #6b5da8;
+  --accent: #a9a2d1;
+  --bg-main: #f5f3ff;
+  --text-main: #2d1b5d;
+  --glass-bg: rgba(255, 255, 255, 0.5);
   --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --glass-shadow: 0 8px 32px 0 rgba(45, 27, 93, 0.1);
   --card-blur: 20px;
-  --mesh-1: #e0f2fe;
-  --mesh-2: #f1f5f9;
+  --mesh-1: #ede9fe;
+  --mesh-2: #f5f3ff;
 }
 
 [data-theme='dark'] {
-  --primary: #f1f5f9;
-  --secondary: #3b82f6;
-  --accent: #93c5fd;
-  --bg-main: #020617;
-  --text-main: #f1f5f9;
-  --glass-bg: rgba(15, 23, 42, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --primary: #ede9fe;
+  --secondary: #7c3aed;
+  --accent: #a78bfa;
+  --bg-main: #1a1033;
+  --text-main: #ede9fe;
+  --glass-bg: rgba(45, 27, 93, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-  --mesh-1: #0f172a;
-  --mesh-2: #020617;
+  --mesh-1: #2d1b5d;
+  --mesh-2: #1a1033;
 }
 
 * {
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Premium Typography */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -147,15 +147,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: var(--secondary);
-  color: white;
-  box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+  background: var(--primary);
+  color: var(--bg-main);
+  box-shadow: 0 10px 20px -5px rgba(45, 27, 93, 0.4);
+}
+
+[data-theme='dark'] .btn-primary {
+  color: #1a1033; /* Ensuring dark text on light primary background in dark mode */
 }
 
 .btn-primary:hover {
-  background: #2563eb;
+  background: var(--secondary);
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 15px 30px -5px rgba(45, 27, 93, 0.5);
 }
 
 .btn-outline {

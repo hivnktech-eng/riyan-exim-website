@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -10,8 +11,11 @@ const Footer = () => {
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px' }}>
           <div>
-            <h3>RIYAN <span className="gradient-text">EXIM</span></h3>
-            <p style={{ marginTop: '20px', opacity: 0.8 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
+              <img src={logo} alt="Riyan Exim Logo" style={{ height: '40px', width: 'auto' }} />
+              <h3 style={{ margin: 0 }}>RIYAN <span className="gradient-text">EXIM</span></h3>
+            </div>
+            <p style={{ opacity: 0.8 }}>
               Leading the way in global trade and logistics solutions. Quality, Trust, and Excellence.
             </p>
           </div>
